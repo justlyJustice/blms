@@ -1,0 +1,110 @@
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 100px;
+}
+
+.infoContain {
+  align-items: center;
+  display: flex;
+  margin-left: 100px;
+}
+
+.item {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  margin: 0px 20px;
+}
+
+.item h2 {
+  color: rgba(48, 48, 48, 0.25);
+  font-family: "Alfa Slab One";
+  font-size: 20px;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+
+.item ul li {
+  color: #1e1e1e;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 17px;
+}
+
+.item ul li.active {
+  color: var(--brown);
+  font-weight: 400;
+}
+
+.developerInfo {
+  font-family: Roboto;
+  font-weight: 300;
+}
+
+.developerInfo p:first-child {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.item i {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    justify-content: start;
+    flex-direction: column;
+  }
+
+  .logoContain {
+    align-self: flex-start;
+  }
+
+  .infoContain {
+    flex-direction: column;
+    margin-left: 0px;
+  }
+
+  .item {
+    margin: 20px 0px;
+  }
+
+  .item h2 {
+    color: rgba(48, 48, 48, 0.25);
+    font-family: "Alfa Slab One";
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 10px;
+  }
+
+  .item ul li {
+    color: #1e1e1e;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+  }
+
+  .item ul li.active {
+    color: var(--brown);
+    font-weight: 400;
+  }
+
+  .developerInfo {
+    font-family: Roboto;
+    font-weight: 300;
+  }
+
+  .developerInfo p:first-child {
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .item i {
+    font-size: 18px;
+  }
+}

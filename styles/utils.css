@@ -1,0 +1,181 @@
+/* Background */
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-danger {
+  background-color: var(--danger);
+}
+
+.bg-dark {
+  background-color: var(--dark);
+}
+
+/* Buttons */
+.btn {
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 0 10px;
+  padding: 10px 25px;
+}
+
+.btn-primary {
+  color: var(--white);
+  background-color: var(--primary-green);
+}
+
+.btn-danger {
+  color: var(--white);
+  background-color: var(--danger);
+}
+
+/* Border-radius */
+.radius-10 {
+  border-radius: 10px;
+}
+
+/* Flex */
+.flex {
+  align-items: center;
+  display: flex;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.justify-space-center {
+  justify-content: center;
+}
+
+.justify-space-around {
+  justify-content: space-around;
+}
+
+.justify-space-evenly {
+  justify-content: space-evenly;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+}
+
+.grid-2fr {
+  grid-template-columns: 2fr 2fr;
+}
+
+.grid-3fr {
+  grid-template-columns: 3fr 1fr;
+}
+
+/* Text */
+.webkit-clamp-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.txt-right {
+  text-align: right;
+}
+
+.txt-justify {
+  text-align: justify;
+}
+
+.txt-left {
+  text-align: left;
+}
+
+.txt-danger {
+  color: var(--danger);
+}
+
+.txt-white {
+  color: var(--white);
+}
+
+.txt-info {
+  color: var(--info);
+}
+
+/* Margin */
+.my-10 {
+  margin: 10px 0px;
+}
+
+.my-20 {
+  margin: 20px 0px;
+}
+
+.my-5 {
+  margin: 5px 0px;
+}
+
+.mx-5 {
+  margin: 0px 5px;
+}
+
+.mx-10 {
+  margin: 0px 10px;
+}
+
+.mx-20 {
+  margin: 0px 20px;
+}
+
+.mx-auto {
+  margin: auto 0px;
+}
+
+.mxr-10 {
+  margin-right: 10px;
+}
+
+.my-auto {
+  margin: 0px auto;
+}
+
+/* Padding */
+.px-10 {
+  padding: 0px 10px;
+}
+
+.py-10 {
+  padding: 10px 0px;
+}
+
+/* Image */
+.img-fit {
+  object-fit: cover;
+  object-position: center;
+}
+
+@media screen and (max-width: 768px) {
+  .flex-md-column {
+    align-items: flex-start;
+    justify-content: start;
+    flex-direction: column;
+  }
+}

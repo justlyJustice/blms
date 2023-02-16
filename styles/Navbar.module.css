@@ -1,0 +1,50 @@
+.nav {
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+  transition: ease-in-out 0.5s all;
+  width: 100%;
+}
+
+.navFixed {
+  box-shadow: 0px 14px 37px -25px rgba(0, 0, 0, 0.33);
+  position: fixed;
+  z-index: 100;
+}
+
+.ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 0px 80px;
+}
+
+.ul li {
+  color: var(--dark);
+  font-family: Roboto;
+  font-weight: 600;
+  margin: 0px 12px;
+}
+
+.nav .authButttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn {
+  border-radius: 20px;
+  font-size: 15px;
+  margin-right: 20px;
+  padding: 0.2rem 1rem;
+  width: 300px;
+}
+
+.btn:first-child {
+  background-color: #ffd99f;
+  color: #320839;
+}
+
+.btn:last-child {
+  background-color: var(--primary);
+  color: var(--white);
+}
