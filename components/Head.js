@@ -21,8 +21,8 @@ const CustomHead = ({ description, title, image }) => {
       <meta property="og:image" content={image} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={currentUrl} />
-      <meta property="og:width" content={300} />
-      <meta property="og:height" content={300} />
+      <meta property="og:width" content={400} />
+      <meta property="og:height" content={400} />
 
       {/* Twitter Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
