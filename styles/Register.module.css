@@ -1,9 +1,0 @@
-.registerContain {
-  align-items: center;
-  display: flex;
-  height: 100vh;
-  justify-content: space-between;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 8px;
-}

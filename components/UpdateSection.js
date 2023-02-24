@@ -1,5 +1,5 @@
 import styles from "@/styles/Home.module.css";
-import { Button, Form, Input } from "./forms";
+import { SubmitButton, Form, Input } from "./forms";
 
 const UpdateSection = () => {
   return (
@@ -20,10 +20,11 @@ const UpdateSection = () => {
         >
           <Input
             width="100%"
+            name={`email`}
             placeholder="Your email address e.g. address@blms.edu.ng"
           />
 
-          <Button>Subscribe Now</Button>
+          <SubmitButton>Subscribe Now</SubmitButton>
 
           {/*  <button type="submit">Subscribe Now</button> */}
         </Form>

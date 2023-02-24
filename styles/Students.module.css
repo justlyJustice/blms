@@ -1,0 +1,437 @@
+/* Wrapper */
+.wrapper {
+  background-color: #f7f7f7;
+  height: 100%;
+}
+
+/* Student Navbar */
+.nav {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  transition: ease-in-out 0.5s all;
+  width: 100%;
+}
+
+.navFixed {
+  box-shadow: 0px 14px 37px -25px rgba(0, 0, 0, 0.33);
+  position: fixed;
+  z-index: 100;
+}
+
+.ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 0px 40px;
+}
+
+.ul .link {
+  color: var(--dark);
+  font-family: Roboto;
+  font-weight: 400;
+  margin: 0px 12px;
+}
+
+.ul .link.active {
+  color: var(--brown);
+  font-weight: 700;
+}
+
+.endContain input {
+  border: 1px solid #a9a9a9;
+  width: 300px;
+}
+
+.endContain .auth {
+  margin: auto 20px;
+}
+
+.endContain .auth .username {
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.endContain .auth .username p {
+  color: var(--dark-purple);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* Body */
+.topSection {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.welcomeText {
+  margin: 13px 0;
+}
+
+/* Welcome text */
+.welcomeText h3 {
+  color: var(--dark-purple);
+  font-size: 24px;
+}
+
+.welcomeText p {
+  color: var(--brown);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+/* Display cards */
+.cards {
+  width: 50%;
+}
+
+.card {
+  align-items: center;
+  display: flex;
+  background-color: var(--primary);
+  border-radius: 20px;
+  flex-direction: column;
+  height: 140px;
+  justify-content: center;
+  margin: 0px 7px;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.card i {
+  color: var(--dark-purple);
+  font-size: 40px;
+  margin: 4px auto;
+}
+
+.card h3 {
+  color: var(--white);
+  font-family: "Alfa Slab One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  width: 140px;
+}
+
+/* Notifications */
+.notifications {
+  align-items: flex-start;
+  border: 1px solid #e38a04;
+  border-radius: 10px;
+  flex-direction: column;
+  height: 140px;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  width: 27%;
+}
+
+.notifications .title {
+  color: var(--brown);
+  font-weight: 400;
+  font-size: 17px;
+  margin: 3px 0;
+}
+
+.notifications .title i {
+  color: #d1a666;
+}
+
+.notifications hr {
+  border: 1px solid #ffdede;
+  margin-top: 4px;
+  width: 100%;
+}
+
+/* Notification */
+.notifications .notification {
+  font-family: Roboto;
+  flex-direction: column;
+  margin: 4px 0;
+}
+
+.notifications .notification .time {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 9px;
+  line-height: 7px;
+  background-color: var(--brown);
+  border-radius: 30px;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.notifications .notification h5 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  margin-left: 7px;
+  overflow: hidden;
+  width: 75%;
+}
+
+/* Middle section */
+.middleSection {
+  align-items: center;
+  display: flex;
+  margin: 35px 0;
+  justify-content: space-between;
+}
+
+/* Subjects Contain  */
+.subjects {
+  width: 30%;
+}
+
+.subjects h3 {
+  color: var(--primary);
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.subjects .subjectsCard {
+  align-items: center;
+  background-color: var(--white);
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  flex-direction: column;
+  height: 190px;
+  padding: 30px;
+}
+
+.subjects .subjectsCard .enrolled {
+  align-self: end;
+  font-family: Roboto;
+  margin-bottom: 14px;
+  text-align: right;
+}
+
+.subjects .subjectsCard .enrolled p {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.subjects .subjectsCard .enrolled p span {
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 3px;
+  padding: 3px;
+}
+
+.subjects .subjectsCard .singleSubject {
+  align-items: center;
+  display: flex;
+  font-family: Roboto;
+  margin: 8px 0;
+}
+
+.subjects .subjectsCard .singleSubject i {
+  color: #ffdede;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.subjects .subjectsCard .singleSubject span {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.subjects .subjectsCard .viewBtn {
+  background-color: var(--dark-purple);
+  font-size: 11px;
+  font-weight: 400;
+  margin-top: 4px;
+  padding: 7px 10px !important;
+  width: 60%;
+}
+
+/* Dashboard report cards */
+.reports {
+  width: 45%;
+}
+
+.reports h3 {
+  color: var(--brown);
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.reports .reportCards {
+  align-items: center;
+  background-color: var(--white);
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  flex-direction: column;
+  height: 190px;
+  padding: 30px;
+}
+
+.reports .reportCards .singleReport {
+  align-items: center;
+  display: flex;
+  font-family: Roboto;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.reports .reportCards .singleReport .textContain {
+  width: 70%;
+}
+
+.reports .reportCards .singleReport .textContain i {
+  color: #ffd99f;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.reports .reportCards .singleReport .textContain span {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.reports .reportCards .singleReport .reportBtn {
+  background-color: #ffd99f;
+  border-radius: 20px;
+  color: var(--brown);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 4px 0px !important;
+  width: 30%;
+}
+
+.resourcesDownload {
+  width: 20%;
+  margin-top: -60px;
+}
+
+.resourcesDownload button {
+  background: #f2d8ff;
+  border-radius: 10px;
+  color: #000000;
+  font-weight: 400;
+  font-size: 12px;
+  margin: 10px 0;
+}
+
+.resourcesDownload button i {
+  color: var(--pink);
+  margin-right: 10px;
+}
+
+.viewReportsBtn {
+  background-color: #b37600 !important;
+  font-size: 11px;
+  font-weight: 400;
+  margin-top: 10px;
+  padding: 7px 10px !important;
+  width: 40% !important;
+}
+
+/* Dashboard -> Bottom section */
+.bottomSection {
+  align-items: center;
+  display: flex;
+}
+
+.bottomSection .exams {
+  width: 75%;
+}
+
+.bottomSection .exams h3 {
+  color: var(--primary);
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.bottomSection .exams .examsCard {
+  align-items: center;
+  background-color: var(--white);
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  height: 190px;
+  padding: 20px 0px;
+}
+
+.bottomSection .exams .examsCard .viewExams {
+  background-color: var(--dark-purple);
+  font-size: 11px;
+  font-weight: 400;
+  margin: 0px 15px;
+  padding: 7px 10px !important;
+  width: 40% !important;
+}
+
+/* All subjects */
+.allSubjects {
+  margin-top: 20px;
+}
+
+.allSubjects .topTextContain {
+  margin-bottom: 27px;
+}
+
+.allSubjects .topTextContain div:first-child {
+  margin-bottom: 10px;
+}
+
+.allSubjects .topTextContain div:first-child h2 {
+  color: var(--dark-purple);
+  font-size: 30px;
+}
+
+.allSubjects .topTextContain div:first-child p {
+  color: var(--primary);
+  font-family: Roboto;
+}
+
+.allSubjects .topTextContain div:first-child p span {
+  text-transform: capitalize !important;
+}
+
+.allSubjects .topTextContain hr {
+  border: 1px solid #f2f2f2;
+}
+
+/* Single subject */
+.annoucement {
+  background-color: var(--brown);
+  box-shadow: 0px 5px 20px rgba(141, 129, 129, 0.25);
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.annoucement .bellCircle {
+  background: #ffd99f;
+  border-radius: 30px;
+  height: 30px;
+  justify-content: center;
+  margin: 0px 8px;
+  width: 30px;
+}
+
+.annoucement .bellCircle i {
+  color: var(--brown);
+}
+
+.annoucement p {
+  color: var(--white);
+  font-size: 16px;
+}
+
+/* Subject Contain */
+.subjectContain {
+  grid-gap: 40px;
+  margin-top: 30px;
+}

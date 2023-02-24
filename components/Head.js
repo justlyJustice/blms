@@ -36,7 +36,6 @@ const CustomHead = ({ description, title, image }) => {
 CustomHead.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
-  image: PropTypes.string,
 };
 
 export default CustomHead;

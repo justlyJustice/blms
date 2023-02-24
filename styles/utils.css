@@ -56,6 +56,10 @@
   justify-content: space-evenly;
 }
 
+.justify-space-start {
+  justify-content: flex-start;
+}
+
 .flex-column {
   flex-direction: column;
 }

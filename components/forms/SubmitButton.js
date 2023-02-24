@@ -2,23 +2,34 @@ import { useFormikContext } from "formik";
 import styled from "styled-components";
 
 const colors = {
-  primary: "#e38a04",
+  brown: "#e38a04",
   dark: "#1e1e1e",
-  white: "#ffffff",
+  primary: "#b51aae",
   purple: "#320839",
+  white: "#ffffff",
 };
 
 const Btn = styled.button`
-  color: ${(props) => (props.color ? colors[props.color] : `white`)};
   background-color: ${(props) =>
     props.background ? colors[props.background] : "var(--primary)"};
   border-radius: ${(props) => (props.radius ? props.radius : "10px")};
-  font-family: Roboto;
+  color: ${(props) => (props.color ? colors[props.color] : `white`)};
+  cursor: pointer;
+  font-family: ${(props) => (props.alfaSlab ? `Alfa Slab One` : `Roboto`)};
   padding: 10px 20px;
+  transition: ease-in-out all 0.5s;
   width: ${(props) => (props.width ? props.width : "100%")};
+
+  /* &:hover {
+    transform: translateX(4px);
+  } */
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
-const FormInput = ({ children, ...props }) => {
+const SubmitButton = ({ children, ...props }) => {
   const { handleSubmit } = useFormikContext();
 
   return (
@@ -28,4 +39,4 @@ const FormInput = ({ children, ...props }) => {
   );
 };
 
-export default FormInput;
+export default SubmitButton;

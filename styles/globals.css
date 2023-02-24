@@ -1,11 +1,13 @@
 :root {
   --brown: #e38a04;
-  --dark: #1e1e1e;
   --black: black;
-  --white: #ffffff;
-  --primary: #b51aae;
+  --dark: #1e1e1e;
+  --danger: #ff0000;
   --dark-purple: #320839;
   --info: rgba(48, 48, 48, 0.25);
+  --primary: #b51aae;
+  --pink: #ed23e5;
+  --white: #ffffff;
 }
 
 * {
@@ -19,6 +21,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {

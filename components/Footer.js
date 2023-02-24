@@ -48,7 +48,7 @@ const Footer = () => (
 
           <p className="flex flex-md-column justify-space-between">
             <span>
-              <div className="txt-info bx bx-globe"></div> www.boungbai.com
+              <i className="txt-info bx bx-globe"></i> www.boungbai.com
             </span>
 
             <span>
