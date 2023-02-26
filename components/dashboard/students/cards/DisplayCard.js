@@ -7,17 +7,23 @@ const colors = {
   dark: "#1e1e1e",
   primary: "#b51aae",
   purple: "#320839",
+  pink: "#ed23e5",
   white: "#ffffff",
 };
 
-const DisplayCard = ({ color, icon, href = `#`, text }) => {
+const DisplayCard = ({ color = `primary`, icon, href = `#`, text }) => {
   return (
     <Link
       style={{ backgroundColor: colors[color] }}
       href={href}
       className={styles.card}
     >
-      <i className={`bx ${icon}`}></i>
+      <i
+        style={{
+          color: color === `primary` ? `var(--pink)` : `var(--primary)`,
+        }}
+        className={`bx ${icon}`}
+      ></i>
 
       <h3>{text}</h3>
     </Link>

@@ -11,6 +11,7 @@ const Card = styled(Link)`
   height: 130px;
   justify-content: center;
   margin-left: 15px;
+  padding: 10px 44px;
   width: 140px;
 
   i {
@@ -25,7 +26,14 @@ const Card = styled(Link)`
     font-weight: 300;
     font-size: 15px;
     text-align: center;
-    width: 140px;
+    /* width: 140px; */
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 100%;
+    margin: 10px 0;
+    padding: 30px;
+    width: 100%;
   }
 `;
 

@@ -10,12 +10,14 @@
 }
 
 .hero div:first-child img {
+  object-fit: contain;
   position: relative;
-  right: 100px;
+  right: 70px;
+  width: 740px;
 }
 
 .hero div:last-child {
-  width: 30%;
+  /* width: 30%; */
 }
 
 .hero div:last-child h1 {
@@ -144,10 +146,12 @@
 .coverSection {
   background-image: linear-gradient(
       to right,
-      rgba(50, 8, 57),
+      rgba(50, 8, 57, 0.87),
       rgba(50, 8, 57, 0.87)
     ),
     url("../public/assets/kid-bg-image.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
   margin-top: 40px;
   padding: 40px 0;
   width: 100%;
@@ -155,7 +159,7 @@
 
 .coverSectionContent {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .cover_circle {
@@ -165,10 +169,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0px 20px;
   padding: 40px;
   text-align: center;
-  width: 180px;
-  height: 180px;
+  width: 220px;
+  height: 220px;
 }
 
 .cover_circle h3 {
@@ -244,18 +249,19 @@
 
   .hero div:first-child img {
     object-fit: contain;
-    right: 0px;
+    right: 10px;
     position: initial !important;
-    width: 400px;
+    width: 100%;
   }
 
   .hero div:last-child {
-    margin-top: -100px;
+    margin-top: -120px;
     width: 100%;
   }
 
   .hero div:last-child h1 {
     font-size: 40px;
+    line-height: 40px;
     text-align: center;
   }
 

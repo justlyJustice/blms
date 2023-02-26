@@ -6,12 +6,28 @@
   padding: 40px 0;
   transition: ease-in-out 0.5s all;
   width: 100%;
+  z-index: 9999;
+}
+
+.logo {
+  align-items: center;
+  display: flex;
+}
+
+.navIcon {
+  cursor: pointer !important;
+  display: none;
+  font-size: 40px;
 }
 
 .navFixed {
   box-shadow: 0px 14px 37px -25px rgba(0, 0, 0, 0.33);
   position: fixed;
-  z-index: 100;
+}
+
+.navLinks {
+  align-items: center;
+  display: flex;
 }
 
 .ul {
@@ -20,14 +36,42 @@
   margin: 0px 80px;
 }
 
-.ul li {
+.ul .link {
   color: var(--dark);
   font-family: Roboto;
   font-weight: 600;
   margin: 0px 12px;
+  position: relative;
 }
 
-.nav .authButttons {
+.ul .link:hover {
+  color: var(--brown);
+  transition: 0.3s all ease-in-out;
+}
+
+.ul .link::before {
+  content: "";
+  background-color: var(--brown);
+  height: 3px;
+  position: absolute;
+  transition: 0.5s all ease-in-out;
+  top: 20px;
+  width: 0%;
+}
+
+.ul .link:hover::before {
+  width: 80%;
+}
+
+.ul .link.active {
+  color: var(--brown);
+}
+
+.ul .link.active::before {
+  width: 80%;
+}
+
+.nav .authButtons {
   display: flex;
   justify-content: space-around;
 }
@@ -36,8 +80,8 @@
   border-radius: 20px;
   font-size: 15px;
   margin-right: 20px;
-  padding: 0.2rem 1rem;
-  width: 300px;
+  padding: 0.2rem 1.4rem;
+  text-align: center;
 }
 
 .btn:first-child {
@@ -51,7 +95,72 @@
 }
 
 @media screen and (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    padding: 0;
+    transition: 0.5s all ease-in-out;
+    z-index: 10000;
+  }
+
+  /*  .nav.expand {
+    height: 70%;
+    transition: 0.9s all ease-in-out;
+  } */
+
+  .logo {
+    justify-content: space-between;
+    padding: 20px 40px;
+    width: 100%;
+    z-index: 10000;
+  }
+
+  .navIcon {
+    display: block;
+  }
+
+  .navLinks {
+    background-color: var(--white);
+    align-items: flex-start;
+    flex-direction: column;
+    height: 0px;
+    overflow: hidden;
+    transition: 0.3s all ease-in-out;
+    width: 100%;
+  }
+
+  .navLinks > * {
+    padding: 20px 40px;
+  }
+
+  .navLinks.display {
+    height: 400px;
+    transition: 0.3s all ease-in-out;
+  }
+
+  .navLinks.display > * {
+    display: flex;
+  }
+
   .ul {
     flex-direction: column;
+    margin: 0px;
+  }
+
+  .link {
+    margin: 4px 0px !important;
+    width: fit-content;
+  }
+
+  .navLinks .authButtons {
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .navLinks .authButtons .btn {
+    border-radius: 40px;
+    margin: 8px 0px;
+    padding: 0.4rem 2rem;
+    width: 100%;
   }
 }

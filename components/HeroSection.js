@@ -7,7 +7,13 @@ const HeroSection = () => {
   return (
     <section className={`${styles.hero} flex container`}>
       <div>
-        <Image width={800} src={heroImg} priority alt="hero-img" />
+        <Image
+          width="auto"
+          src={heroImg}
+          height="auto"
+          priority
+          alt="hero-img"
+        />
       </div>
 
       <div>

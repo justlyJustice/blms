@@ -25,7 +25,8 @@ body {
 }
 
 body {
-  font-family: Alfa Slab One, Roboto;
+  font-family: Alfa Slab One, Roboto, sans-serif, "Courier New", Courier,
+    monospace;
 }
 
 a {

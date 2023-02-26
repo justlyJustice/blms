@@ -24,14 +24,22 @@ const StudentDashboard = () => {
 
         <div className={`flex ${styles.topSection}`}>
           <div className={`flex ${styles.cards}`}>
-            <DisplayCard icon={`bxs-file-export`} text={`Submit Assignment`} />
+            <DisplayCard
+              color={`pink`}
+              icon={`bxs-file-export`}
+              text={`Submit Assignment`}
+            />
 
             <DisplayCard
               icon={`bxs-download`}
               text={`Download Subject Materials`}
             />
 
-            <DisplayCard icon={`bx-user-plus`} text={`Create Study Group`} />
+            <DisplayCard
+              color="pink"
+              icon={`bx-user-plus`}
+              text={`Create Study Group`}
+            />
 
             <DisplayCard icon={`bx-task`} text={`Take Surveys`} />
           </div>
@@ -137,9 +145,12 @@ const StudentDashboard = () => {
 
             <div className={styles.examsCard}>
               <TestCard icon={`bx-atom`} text={`Physics`} />
-              <TestCard icon={`bx-atom`} text={`Physics`} />
-              <TestCard icon={`bx-atom`} text={`Physics`} />
-              <TestCard icon={`bx-atom`} text={`Physics`} />
+
+              <TestCard icon={`bx-book`} text={`English Language`} />
+
+              <TestCard icon={`bx-dna`} text={`Biology`} />
+
+              <TestCard icon={`bx-laptop`} text={`Computer Science`} />
 
               <Button className={styles.viewExams} radius={`20px`}>
                 View All Exams & Tests
@@ -147,8 +158,28 @@ const StudentDashboard = () => {
             </div>
           </div>
 
-          <div>
+          <div className={styles.forumContain}>
             <h3>My Forum</h3>
+
+            <div className={styles.forumCard}>
+              <div className={styles.forums}>
+                <div className={styles.singleForum}>
+                  <p>Q&A sessions was initiated in an English Class</p>
+
+                  <span className={styles.timeInitiated}>NOW</span>
+                </div>
+
+                <div className={styles.singleForum}>
+                  <p>Q&A sessions was initiated in an English Class</p>
+
+                  <span className={styles.timeInitiated}>NOW</span>
+                </div>
+              </div>
+
+              <Button className={styles.viewReportsBtn} radius={`20px`}>
+                View All Forums
+              </Button>
+            </div>
           </div>
         </div>
       </div>

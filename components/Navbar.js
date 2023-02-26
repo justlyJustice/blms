@@ -1,31 +1,21 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
+
+import { logo } from "@/public/assets";
+import useWindowHeight from "@/hooks/useWindowHeight";
 
 import styles from "@/styles/Navbar.module.css";
-import { logo } from "@/public/assets";
 
 const Navbar = () => {
-  const [clientWindowHeight, setClientWindowHeight] = useState("");
-  const [isHeightAttained, setIsHeightAttained] = useState(false);
+  const { isHeightAttained } = useWindowHeight();
+  const { pathname } = useRouter();
+  const [showNav, setShowNav] = useState(false);
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const handleScroll = () => {
-    setClientWindowHeight(window.scrollY);
+  const handleShowNav = () => {
+    setShowNav(!showNav);
   };
-
-  useEffect(() => {
-    if (clientWindowHeight > 300) {
-      setIsHeightAttained(true);
-    } else {
-      setIsHeightAttained(false);
-    }
-  }, [clientWindowHeight]);
 
   return (
     <nav
@@ -35,46 +25,61 @@ const Navbar = () => {
     >
       <div className={styles.logo}>
         <Image src={logo} width={100} alt="Logo" priority />
+
+        {showNav ? (
+          <i
+            className={`${styles.navIcon} bx bx-x`}
+            onClick={handleShowNav}
+          ></i>
+        ) : (
+          <i
+            className={` ${styles.navIcon} bx bx-menu`}
+            onClick={handleShowNav}
+          ></i>
+        )}
       </div>
 
-      <div className={styles.navLinks}>
+      <div className={`${styles.navLinks} ${showNav ? styles.display : ""}`}>
         <ul className={styles.ul}>
-          <li>
-            <Link href={`/`}>Home</Link>
-          </li>
+          <Link
+            className={`${styles.link} ${
+              pathname === "/" ? styles.active : ""
+            }`}
+            href={`/`}
+          >
+            Home
+          </Link>
 
-          <li>
-            <Link href="#courses">Courses</Link>
-          </li>
+          <Link className={styles.link} href="#courses">
+            Courses
+          </Link>
 
-          <li>
-            <Link href={`/sessions`}>Sessions</Link>
-          </li>
+          <Link className={styles.link} href={`/sessions`}>
+            Sessions
+          </Link>
 
-          <li>
-            <Link href={`/documentation`}>
-              Documentation <i className="bx bx-chevron-down"></i>
-            </Link>
-          </li>
+          <Link className={styles.link} href={`/documentation`}>
+            Documentation <i className="bx bx-chevron-down"></i>
+          </Link>
 
-          <li>
-            <Link href={`/blog`}>Blog</Link>
-          </li>
+          <Link className={styles.link} href={`/blog`}>
+            Blog
+          </Link>
 
-          <li>
-            <Link href={`/contact`}>Contact</Link>
-          </li>
+          <Link className={styles.link} href={`/contact`}>
+            Contact
+          </Link>
         </ul>
-      </div>
 
-      <div className={styles.authButtons}>
-        <Link className={styles.btn} href="/auth/login">
-          Login
-        </Link>
+        <div className={styles.authButtons}>
+          <Link className={styles.btn} href="/auth/login">
+            Login
+          </Link>
 
-        <Link className={styles.btn} href="/auth/register">
-          Register
-        </Link>
+          <Link className={styles.btn} href="/auth/register">
+            Register
+          </Link>
+        </div>
       </div>
     </nav>
   );

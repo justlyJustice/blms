@@ -1,12 +1,6 @@
 import styled from "styled-components";
 
-const colors = {
-  brown: "#e38a04",
-  dark: "#1e1e1e",
-  primary: "#b51aae",
-  purple: "#320839",
-  white: "#ffffff",
-};
+import colors from "@/utils/colors";
 
 const Btn = styled.button`
   background-color: ${(props) =>
