@@ -46,7 +46,6 @@
 
 .ul .link:hover {
   color: var(--brown);
-  transition: 0.3s all ease-in-out;
 }
 
 .ul .link::before {
@@ -98,14 +97,8 @@
   .nav {
     flex-direction: column;
     padding: 0;
-    transition: 0.5s all ease-in-out;
     z-index: 10000;
   }
-
-  /*  .nav.expand {
-    height: 70%;
-    transition: 0.9s all ease-in-out;
-  } */
 
   .logo {
     justify-content: space-between;
@@ -147,13 +140,12 @@
   }
 
   .link {
-    margin: 4px 0px !important;
+    margin: 7px 0px !important;
     width: fit-content;
   }
 
   .navLinks .authButtons {
     flex-direction: column;
-    justify-content: space-around;
     width: 100%;
   }
 

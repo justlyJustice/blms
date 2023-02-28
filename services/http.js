@@ -5,7 +5,7 @@ import { toast } from "react-hot-toast";
 import apiUrl from "@/config/apiUrl";
 
 const client = create({
-  baseURL: apiUrl,
+  baseURL: `http://localhost:3000`,
 });
 
 client.axiosInstance.interceptors.request.use(null, (error) => {

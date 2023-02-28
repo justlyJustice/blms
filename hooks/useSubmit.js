@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
-/* import { toast } from "react-toastify"; */
+import { toast } from "react-hot-toast";
 
 import logger from "@/utils/logger";
 import { getStatus } from "@/utils/statusCodes";
@@ -25,13 +25,13 @@ const useSubmit = (apiFunc) => {
 
     if (!res) {
       setSubmitting(false);
-      return alert(`Something went wrong!`);
+      return toast.error(`Something went wrong!`);
     }
 
     if (res.ok) {
       setSuccess(true);
       setData(res.data);
-      alert(successMessage);
+      toast.success(successMessage);
 
       if (resetForm) {
         resetForm();
@@ -53,7 +53,7 @@ const useSubmit = (apiFunc) => {
       logger(res);
       setStatus(getStatus(res.problem));
 
-      alert(res.data.message);
+      toast.error(res.data.message);
 
       setTimeout(() => {
         setError(false);

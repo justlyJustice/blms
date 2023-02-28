@@ -1,13 +1,16 @@
 import * as Yup from "yup";
 import Head from "@/components/Head";
 import Image from "next/image";
+import Link from "next/link";
 
 import { SubmitButton, Form, InputGroup } from "@/components/forms";
 import { loginFields } from "@/data/forms";
 
 import { logo, loginIllustration } from "@/public/assets";
 import styles from "@/styles/Forms.module.css";
-import Link from "next/link";
+
+import useSubmit from "@/hooks/useSubmit";
+import { loginUser } from "@/services/auth";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required().email().label(`Email`),
@@ -15,10 +18,9 @@ const validationSchema = Yup.object().shape({
 });
 
 const Login = () => {
+  const { submit, submitting } = useSubmit(loginUser);
   const handleSubmit = (values, { resetForm }) => {
-    alert(JSON.stringify(values));
-
-    resetForm();
+    submit(values);
   };
 
   return (
@@ -81,10 +83,15 @@ const Login = () => {
               <SubmitButton
                 alfaSlab
                 background={`primary`}
+                disabled={submitting}
                 radius={`20px`}
                 width="25%"
               >
-                Login
+                {submitting ? (
+                  <i className="bx bx-loader-circle bx-spin txt-17"></i>
+                ) : (
+                  `Login`
+                )}
               </SubmitButton>
             </div>
           </Form>

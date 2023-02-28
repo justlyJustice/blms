@@ -20,20 +20,25 @@ const Btn = styled.button`
   transition: ease-in-out all 0.5s;
   width: ${(props) => (props.width ? props.width : "100%")};
 
-  /* &:hover {
-    transform: translateX(4px);
-  } */
-
   @media screen and (max-width: 768px) {
     width: 100%;
   }
 `;
 
-const SubmitButton = ({ children, ...props }) => {
+const SubmitButton = ({ children, disabled, ...props }) => {
   const { handleSubmit } = useFormikContext();
 
   return (
-    <Btn {...props} type="submit" onClick={handleSubmit} {...props}>
+    <Btn
+      {...props}
+      type="submit"
+      onClick={handleSubmit}
+      style={{
+        backgroundColor: disabled ? `var(--info)` : ``,
+        pointerEvents: disabled ? `none` : ``,
+      }}
+      {...props}
+    >
       {children}
     </Btn>
   );

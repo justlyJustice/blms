@@ -1,3 +1,4 @@
 import http from "./http";
 
-export const loginUser = (values) => http.post(``, values);
+export const loginUser = async (values) =>
+  await http.post(`/api/login`, values);

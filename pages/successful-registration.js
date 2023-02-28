@@ -17,6 +17,12 @@ const SuccessfulRegistration = () => {
     setBrowserWindow(window);
   }, []);
 
+  useEffect(() => {
+    if (browserWindow) {
+      console.log(browserWindow);
+    }
+  }, [browserWindow]);
+
   return (
     <>
       <Head
@@ -26,9 +32,10 @@ const SuccessfulRegistration = () => {
       />
 
       <ReactConfetti
-        height={browserWindow?.innerHeight}
-        width={browserWindow?.innerWidth}
+        height={browserWindow?.screen.availHeight}
+        width={browserWindow?.screen.availWidth}
       />
+
       <section className={styles.wrapper}>
         <div className={styles.formContain}>
           <div className={`${styles.header} flex`}>

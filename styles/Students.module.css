@@ -556,7 +556,7 @@
 }
 
 .collapse .collapseBody.collapseExpanded {
-  height: 200px;
+  height: fit-content;
   transition: 0.4s all ease-in-out;
 }
 

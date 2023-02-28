@@ -84,7 +84,17 @@ const Register = () => {
             </div>
 
             <div className={`${styles.confirmation} flex my-5`}>
-              <input type="checkbox" name="" id="" />
+              <input
+                type="checkbox"
+                name="isTermsAccepted"
+                onChange={(e) => {
+                  if (e.target.checked) {
+                    setIsTermsAccepted(true);
+                  } else {
+                    setIsTermsAccepted(false);
+                  }
+                }}
+              />
 
               <p>
                 I accept the <span>Terms & Conditions</span>
@@ -97,6 +107,7 @@ const Register = () => {
               <SubmitButton
                 alfaSlab
                 background={`brown`}
+                disabled={!isTermsAccepted}
                 radius={`20px`}
                 width="25%"
               >
