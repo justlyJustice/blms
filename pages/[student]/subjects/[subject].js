@@ -21,9 +21,7 @@ const Subject = ({ subject }) => {
             <i className="bx bxs-bell"></i>
           </div>
 
-          <p>
-            Final Exam commences on the 18<sup>th</sup> of February, 2023
-          </p>
+          <p>Final Exam commences on the 18th of February, 2023</p>
         </div>
 
         <div className={`grid grid-3fr ${styles.subjectContain}`}>

@@ -1,0 +1,167 @@
+.sidebar {
+  background: var(--dark-purple);
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+
+.sidebar .topContain {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 35px;
+}
+
+.sidebar .topContain .logo {
+  height: auto;
+  width: 120px;
+}
+
+.sidebar .topContain hr {
+  border: 1px solid var(--primary);
+  margin: 10px 0;
+  width: 120px;
+}
+
+.sidebar .topContain i {
+  color: var(--white);
+  cursor: pointer;
+  display: none;
+  font-size: 30px;
+}
+
+.sidebar .menu {
+  flex-direction: column;
+  margin: 0;
+}
+
+.links {
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 45px;
+  width: 100%;
+}
+
+.links .link {
+  align-items: center;
+  color: var(--white);
+  display: flex;
+  font-family: Poppins;
+  font-weight: 300;
+  border-radius: 10px;
+  margin: 4px 0;
+  padding: 8px 20px;
+  width: 100%;
+}
+
+.links .link:hover {
+  transform: translateX(7px);
+}
+
+.links .link.active {
+  color: #320839;
+  background-color: var(--white);
+}
+
+.links .link.active:hover {
+  transform: translateX(0px);
+}
+
+.links .link i {
+  margin-right: 10px;
+}
+
+.authContain {
+  margin-top: 30px;
+}
+
+.authContain .user {
+  flex-direction: column;
+}
+
+.authContain .user .avatar {
+  border: 1.5px solid var(--primary);
+  border-radius: 10px;
+  height: 59px;
+  margin: auto auto;
+  object-fit: cover;
+  width: 59px;
+}
+
+.authContain .user .nameContain {
+  color: var(--white);
+  margin: 10px 0;
+  text-align: center;
+}
+
+.authContain .user .nameContain h3 {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.authContain .user .nameContain p {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 12px;
+  color: #d7d7d7;
+}
+
+.authContain .authBtn {
+  background: #461c4d;
+  border: 1px solid #b51aae;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font-family: Poppins;
+  margin: 10px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+  }
+
+  .sidebar .topContain {
+    background-color: var(--dark-purple);
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .sidebar .topContain i {
+    display: block;
+  }
+
+  .links {
+    margin-left: 0px;
+  }
+
+  .links .link {
+    margin: 4px 0;
+    padding: 8px 20px;
+    width: 100%;
+  }
+
+  .sidebar .menu {
+    background-color: var(--dark-purple);
+    padding: 20px 35px;
+    position: relative;
+    transform: translateX(-100%);
+    transition: ease-in-out all 0.3s;
+  }
+
+  .sidebar .menu.show {
+    transform: translateX(0%);
+    transition: ease-in-out all 0.3s;
+  }
+
+  .authContain {
+    width: 100%;
+  }
+
+  .authContain .authBtn {
+    width: 100%;
+  }
+}

@@ -23,6 +23,17 @@
   z-index: 100;
 }
 
+.logo {
+  align-items: center;
+  display: flex;
+}
+
+.navIcon {
+  cursor: pointer !important;
+  display: none;
+  font-size: 40px;
+}
+
 .ul {
   display: flex;
   justify-content: space-around;
@@ -382,6 +393,7 @@
 .forumContain {
   margin-left: 20px;
   width: 30%;
+  height: 100%;
 }
 
 .forumContain h3 {
@@ -391,16 +403,12 @@
 }
 
 .forumCard {
-  align-items: center;
-  background-color: var(--white);
-  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  flex-direction: column;
-  height: 190px;
+  height: fit-content;
   padding: 30px;
 }
 
 .forumCard .forums {
+  background-color: red;
 }
 
 .forumCard .singleForum {
@@ -425,29 +433,29 @@
   margin-top: 20px;
 }
 
-.allSubjects .topTextContain {
+.topTextContain {
   margin-bottom: 27px;
 }
 
-.allSubjects .topTextContain div:first-child {
+.topTextContain div:first-child {
   margin-bottom: 10px;
 }
 
-.allSubjects .topTextContain div:first-child h2 {
+.topTextContain div:first-child h2 {
   color: var(--dark-purple);
   font-size: 30px;
 }
 
-.allSubjects .topTextContain div:first-child p {
+.topTextContain div:first-child p {
   color: var(--primary);
   font-family: Roboto;
 }
 
-.allSubjects .topTextContain div:first-child p span {
+.topTextContain div:first-child p span {
   text-transform: capitalize !important;
 }
 
-.allSubjects .topTextContain hr {
+.topTextContain hr {
   border: 1px solid #f2f2f2;
 }
 
@@ -457,22 +465,22 @@
   box-shadow: 0px 5px 20px rgba(141, 129, 129, 0.25);
   border-radius: 30px;
   margin: 20px 0px;
-  padding: 10px;
+  padding: 8px 0px;
 }
 
 .annoucement .bellCircle {
   background: #ffd99f;
-  border-radius: 30px;
-  height: 30px;
+  border-radius: 20px;
+  height: 20px;
   justify-content: center;
   /*   margin: 0px 10px; */
-  margin-left: 8px;
-  margin-right: 14px;
-  width: 30px;
+  margin: auto 10px;
+  width: 20px;
 }
 
 .annoucement .bellCircle i {
   color: var(--brown);
+  font-size: 12px;
 }
 
 .annoucement p {
@@ -556,7 +564,7 @@
 }
 
 .collapse .collapseBody.collapseExpanded {
-  height: fit-content;
+  height: 200px;
   transition: 0.4s all ease-in-out;
 }
 
@@ -579,11 +587,100 @@
   margin-right: 20px;
 }
 
+/* Exam */
+.examsContain {
+  grid-gap: 50px;
+}
+
+.examInstructions {
+  background-color: white;
+}
+
+.instructions {
+  color: rgba(50, 8, 57, 0.87);
+  font-family: Roboto;
+  font-weight: 300;
+}
+
+.instructions li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
 @media screen and (max-width: 768px) {
   /* @Media->Wrapper */
   .wrapper {
     background-color: #f2f2f2;
     height: 100% !important;
+  }
+
+  /* Student Navbar */
+  .nav {
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  .logo {
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .logo .navIcon {
+    display: inherit;
+  }
+
+  .navMenu {
+    align-items: flex-start;
+    flex-direction: column;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navMenu.expanded {
+    transition: all 0.3s ease-in-out;
+    height: 300px;
+  }
+
+  .ul {
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 10px 0px;
+    padding: 0px 20px;
+  }
+
+  .ul .link {
+    margin: 8px 0px;
+    padding: 0px 2px;
+  }
+
+  .endContain {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .endContain input {
+    margin: 10px auto;
+    margin-left: 10px;
+  }
+
+  .endContain .auth {
+    margin: 10px 20px;
+  }
+
+  .endContain .auth .username {
+    cursor: pointer;
+    margin-left: 4px;
+  }
+
+  .endContain .auth .username p {
+    color: var(--dark-purple);
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
   }
 
   /* @Media->Welcome text */
@@ -779,8 +876,8 @@
     padding: 30px;
   }
 
-  .forumCard .forums {
-  }
+  /*  .forumCard .forums {
+  } */
 
   .forumCard .singleForum {
     align-items: center;

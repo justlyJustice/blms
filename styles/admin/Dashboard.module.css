@@ -1,0 +1,461 @@
+/* Top Contain */
+.topContain {
+  justify-content: center;
+}
+
+/* Top Contain -> Top left -> Welcome text */
+.topLeft {
+  width: 70%;
+}
+
+.topLeft .welcomeText {
+  margin-right: 20px;
+}
+
+.topLeft .welcomeText h4 {
+  font-size: 24px;
+}
+
+.topLeft .welcomeText h4 span {
+  color: var(--brown);
+}
+
+.topLeft .welcomeText p {
+  font-family: Poppins;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+/* Top Contain -> Searchbox */
+.searchbox {
+  background: #ffffff;
+  border: 1.5px solid #323232;
+  border-radius: 10px;
+  margin-right: 20px;
+  width: 400px;
+}
+
+.searchbox i {
+  color: #5a5a5a;
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.searchbox input {
+  color: #323232;
+  font-family: Poppins;
+  font-weight: 400;
+}
+
+/* Top Contain -> Top right */
+.topRight button {
+  align-items: center;
+  background: var(--dark-purple);
+  border-radius: 10px;
+  display: flex;
+  font-family: Poppins;
+  font-size: 14px;
+  justify-content: center;
+  margin-right: 10px;
+  width: 200px;
+}
+
+.topRight button i {
+  font-size: 17px;
+  margin: 0px 4px;
+}
+
+.topRight .info div {
+  background: var(--white);
+  border: 1.5px solid #323232;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin: 0px 8px;
+  justify-content: center;
+  padding: 8px 17px;
+}
+
+.topRight .info div i {
+  font-size: 17px;
+}
+
+/* Dashboard Content */
+.dashboardContent {
+  margin: 20px 0px;
+  gap: 20px;
+}
+
+/* Dashboard Content -> LeftSide */
+.sideContent {
+  width: 100%;
+}
+
+/* Dashboard Content -> LeftSide -> Cards contain */
+.sideContent .cardsContain {
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.sideContent .cardsContain .cards {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 60%;
+}
+
+.sideContent .cardsContain .cards .card {
+  background: var(--white);
+  box-shadow: 3px 1px 3px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
+  height: 170px;
+  justify-content: center;
+  margin: 10px;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+  width: 200px;
+}
+
+.sideContent .cardsContain .cards .card .icon {
+  align-items: center;
+  background: #f5f5f5;
+  display: flex;
+  border-radius: 10px;
+  height: 40px;
+  justify-content: center;
+  width: 40px;
+}
+
+.sideContent .cardsContain .cards .card .icon i {
+  font-size: 25px;
+}
+
+.sideContent .cardsContain .cards .card .cardText {
+  text-align: center;
+  margin-left: 8px;
+}
+
+.sideContent .cardsContain .cards .card .cardText h3 {
+  font-size: 38px;
+}
+
+.sideContent .cardsContain .cards .card .cardText p {
+  color: #505050;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.overLayIcon {
+  bottom: 0%;
+  color: rgba(0, 0, 0, 0.1);
+  font-size: 120px;
+  left: 80px;
+  position: absolute;
+  top: 50%;
+}
+
+/* Dashboard Content -> LeftSide -> Assign teachers */
+.assignedTeachers {
+  background: var(--white);
+  box-shadow: 3px 1px 3px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  height: 360px;
+  padding: 30px;
+}
+
+.assignedTeachers .startText {
+  margin-bottom: 8px;
+}
+
+.assignedTeachers .startText h3 {
+  color: var(--primary);
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0em;
+}
+
+.assignedTeachers .startText p {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.assignedTeachers .teacher {
+  width: 100%;
+}
+
+.assignedTeachers .teacher span {
+  background: var(--brown);
+  border-radius: 10px;
+  height: 15px;
+  margin-right: 10px;
+  width: 15px;
+}
+
+.assignedTeachers .teacher h4 {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.assignedTeachers .teacher p {
+  color: #6e6e6e;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.assignedTeachers .teacher hr {
+  border: 1px solid #a0a0a0;
+  margin: 8px 0px;
+}
+
+/* Dashboard Content -> LeftSide -> Class evaluation */
+.classEvaluation {
+  display: flex;
+  background: var(--white);
+  box-shadow: 3px 1px 3px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  flex-direction: column;
+  /* height: 200px; */
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.classEvaluation .evalTopContain {
+  margin-bottom: 10px;
+}
+
+.classEvaluation .evalTopContain h3 {
+  color: var(--primary);
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0em;
+}
+
+.classEvaluation .evalTopContain span {
+  color: var(--primary);
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.classEvaluation .evaluation {
+  justify-content: space-between;
+}
+
+/* Dashboard Content -> LeftSide -> Timetable upload */
+.timetableUpload {
+  background: var(--white);
+  box-shadow: 3px 1px 3px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.timetableUpload h3 {
+  color: var(--brown);
+  margin-bottom: 10px;
+}
+
+.timetableUpload .uploadedInfo {
+  font-family: Poppins;
+}
+
+.timetableUpload .uploadedInfo .div1 {
+  margin-right: 40px;
+}
+
+.timetableUpload .uploadedInfo .div1 div:first-child {
+  background-color: var(--primary);
+  border-radius: 30px;
+  color: var(--white);
+  height: 60px;
+  margin-right: 20px;
+  width: 60px;
+}
+
+.timetableUpload .uploadedInfo .div1 div:first-child i {
+  font-size: 20px;
+}
+
+/* .timetableUpload .uploadedInfo .div1 div:nth-child(2) {
+  font-family: Poppins;
+} */
+
+.timetableUpload .uploadedInfo .div1 div:nth-child(2) p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.timetableUpload .uploadedInfo .div1 div:nth-child(2) span {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/* .timetableUpload .uploadedInfo .div2 {
+  background-color: var(--dark-purple);
+} */
+
+.timetableUpload .uploadedInfo .div2 div:first-child {
+  margin-right: 20px;
+  width: 200px;
+}
+
+.timetableUpload .uploadedInfo .div2 div:first-child p {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.timetableUpload .uploadedInfo .div2 div:first-child span {
+  color: var(--brown);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.timetableUpload .uploadedInfo .div2 button {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+/* Dashboard Content -> EndContent -> Buttons contain */
+.btnContains button {
+  box-shadow: 3px 1px 0px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font-family: Alfa Slab One;
+  margin: 10px 0;
+  padding: 12px;
+}
+
+/* Dashboard Content -> EndContent -> Upcoming events */
+.events {
+  background-color: var(--white);
+  box-shadow: 3px 1px 3px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 20px;
+}
+
+.eventsLink {
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.eventsLink h3 {
+  font-size: 16px;
+  line-height: 22px;
+  color: #b51aae;
+}
+
+.eventsLink a {
+  font-family: Poppins;
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--dark);
+}
+
+.events .eventItem {
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  font-family: Poppins;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.events .eventItem .date {
+  background: rgba(181, 26, 174, 0.2);
+  border-radius: 10px;
+  text-align: center;
+  width: 20%;
+}
+
+.events .eventItem .date p {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.events .eventItem .detail {
+  width: 70%;
+}
+
+.events .eventItem .detail p {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 12px;
+}
+
+.events .eventItem .detail span {
+  font-weight: 300;
+  font-size: 12px;
+  color: #1e1e1e;
+}
+
+.events button {
+  border-radius: 0;
+  font-family: Poppins;
+  font-weight: 400;
+  padding: 12px;
+}
+
+/* Dashboard Content -> EndContent -> News feed */
+.newsFeed {
+  background: var(--white);
+  box-shadow: 3px 1px 3px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin: 10px 0;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.newsFeed .feeds {
+  font-family: Poppins;
+  margin: 20px 0;
+}
+
+.newsFeed .feeds .singleFeed {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  margin: 20px 0;
+}
+
+.newsFeed .feeds .singleFeed p {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.newsFeed .feeds .singleFeed span {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+@media screen and (max-width: 768px) {
+  .topContain {
+    flex-direction: column;
+  }
+
+  .dashboardContent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Dashboard Content -> LeftSide -> Cards contain */
+  .sideContent .cardsContain {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .sideContent .cardsContain .cards {
+    width: 100%;
+  }
+
+  .sideContent .cardsContain .cards .card {
+    width: 100%;
+  }
+}
