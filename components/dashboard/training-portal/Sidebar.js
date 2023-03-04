@@ -3,12 +3,12 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-import { avatar, logo } from "@/public/assets";
+import { logo } from "@/public/assets";
 import styles from "@/styles/admin/Sidebar.module.css";
 import Button from "@/components/Button";
 
 const Sidebar = () => {
-  const { pathname, query } = useRouter();
+  const { pathname } = useRouter();
   const [showMenu, setShowMenu] = useState(false);
 
   const handleShowMenu = () => {
@@ -46,35 +46,17 @@ const Sidebar = () => {
         <div className={`flex ${styles.links}`}>
           <Link
             className={`${styles.link}  ${
-              pathname === "/teacher/[teacherId]" ? `${styles.active}` : ""
+              pathname === "/training/portal" ? `${styles.active}` : ""
             }`}
-            href={`/teacher/${query.teacherId}`}
+            href={`/training/portal`}
           >
             <i className="bx bxs-dashboard"></i>
 
             <span>Dashboard</span>
           </Link>
 
-          <Link className={styles.link} href={`#`}>
-            <i className="bx bxs-user-badge"></i>
-
-            <span>Student</span>
-          </Link>
-
           <Link className={`${styles.link}`} href={`#`}>
-            <i className="bx bx-user-circle"></i>
-
-            <span>Attendance</span>
-          </Link>
-
-          <Link className={styles.link} href={`#`}>
-            <i className="bx bx-book"></i>
-
-            <span>Results</span>
-          </Link>
-
-          <Link className={styles.link} href={`#`}>
-            <i className="bx bx-dollar"></i>
+            <i className="bx bx-book-open"></i>
 
             <span>Courses</span>
           </Link>
@@ -83,6 +65,12 @@ const Sidebar = () => {
             <i className="bx bx-video-plus"></i>
 
             <span>Live Classes</span>
+          </Link>
+
+          <Link className={styles.link} href={`#`}>
+            <i className="bx bx-task"></i>
+
+            <span>Survey</span>
           </Link>
 
           <Link className={styles.link} href={`#`}>
@@ -100,7 +88,7 @@ const Sidebar = () => {
 
         <div className={styles.authContain}>
           <Button className={styles.authBtn}>
-            <i className="bx bx-log-out"></i> Log out
+            <i className="bx bx-log-in"></i> Log out
           </Button>
         </div>
       </div>

@@ -1,0 +1,81 @@
+/* Container */
+.contain {
+  justify-content: space-between;
+}
+
+/* Welcome text */
+
+.welcomeText {
+  gap: 20px;
+}
+
+.welcomeText h4 {
+  font-size: 24px;
+}
+
+.welcomeText h4 span {
+  color: var(--brown);
+}
+
+.welcomeText p {
+  font-family: Poppins;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+/* Search box */
+.searchbox {
+  background: #e3e3e3;
+  border-radius: 10px;
+  justify-content: space-between;
+  margin: 0px 10px;
+  padding: 14px 30px;
+  width: 47%;
+}
+
+.searchbox input {
+  color: var(--dark);
+  background-color: transparent;
+  font-family: Poppins;
+  width: 100%;
+}
+
+.searchbox i {
+  color: var(--dark);
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* End Items */
+.endItems .notification {
+  margin-right: 10px;
+}
+
+.endItems .notification i {
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.endItems .auth {
+  font-family: Poppins;
+}
+
+.endItems .auth img {
+  border-radius: 30px;
+  margin-right: 7px;
+  object-fit: cover;
+  width: 55px;
+  height: 55px;
+}
+
+.endItems .auth h3 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.endItems .auth p {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+}

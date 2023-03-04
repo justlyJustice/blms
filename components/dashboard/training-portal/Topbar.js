@@ -1,18 +1,17 @@
 import { avatar } from "@/public/assets";
+import styles from "@/styles/teacher/Topbar.module.css";
 import Image from "next/image";
 import Searchbox from "../common/Searchbox";
-
-import styles from "@/styles/teacher/Topbar.module.css";
 
 const TopBar = () => {
   return (
     <div className={`flex ${styles.contain}`}>
       <div className={styles.welcomeText}>
         <h4>
-          Welcome back, <span>Justice</span>
+          <span>Welcome to BLMS</span>
         </h4>
 
-        <p>You’re logged in as a Teacher</p>
+        <p>Training Portal</p>
       </div>
 
       <Searchbox />

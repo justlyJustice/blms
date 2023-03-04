@@ -1,0 +1,244 @@
+/* Dashboard content */
+.content {
+  align-items: flex-start;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.leftItems {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 65%;
+}
+
+.displayCards {
+  justify-content: space-between;
+}
+
+.displayCards .displayCard {
+  background-color: var(--primary);
+  border-radius: 10px;
+  color: var(--white);
+  cursor: pointer;
+  height: 150px;
+  padding: 30px;
+  width: 30%;
+}
+
+.displayCards .displayCard .iconContain {
+  background-color: var(--pink);
+  border-radius: 5px;
+  color: var(--white);
+  height: 40px;
+  justify-content: center;
+  margin-right: 20px;
+  padding: 8px;
+  width: 40px;
+}
+
+.displayCards .displayCard .text {
+  text-align: center;
+}
+
+.displayCards .displayCard .text h3 {
+  font-size: 40px;
+}
+
+.displayCards .displayCard .text p {
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 10px;
+  text-transform: uppercase;
+}
+
+/* Dasboard content -> Latest courses */
+.latestCourses {
+  background: rgba(181, 26, 174, 0.2);
+  border-radius: 10px;
+  margin: 15px 0;
+  padding: 20px;
+}
+
+.latestCourses .header {
+  margin: 10px 0;
+}
+
+.latestCourses .header h2 {
+  color: var(--dark-purple);
+  font-size: 20px;
+}
+
+.latestCourses .header a {
+  font-family: Poppins;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.latestCourses .singleCourse {
+  font-family: Poppins;
+}
+
+.latestCourses .singleCourse .courseImage {
+  border-radius: 10px;
+  margin-right: 20px;
+  overflow: hidden;
+  width: 400px;
+  height: 130px;
+}
+
+.latestCourses .singleCourse .courseImage img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.latestCourses .singleCourse h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.latestCourses .singleCourse p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.latestCourses .singleCourse i {
+  color: var(--dark);
+  cursor: pointer;
+  font-size: 25px;
+}
+
+/* Dasboard content -> Bottom cards */
+.bottomCards {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.bottomCards .card {
+  background: rgba(181, 26, 174, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  flex-direction: column;
+  height: 90px;
+  justify-content: center;
+  padding: 10px;
+  margin: 5px 0;
+  text-align: center;
+  width: 23%;
+}
+
+.bottomCards .card i {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.bottomCards .card h4 {
+  font-size: 13px;
+}
+
+/* Dashboard -> right items */
+.rightItems {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 0;
+  width: 32%;
+}
+
+.rightItems .topStudents {
+  background: rgba(181, 26, 174, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.rightItems .topStudents .topTitle {
+  color: var(--dark-purple);
+  font-size: 20px;
+  line-height: 27px;
+  margin: 20px 0;
+}
+
+.rightItems .topStudents .student {
+  align-items: center;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  display: flex;
+  font-family: Poppins;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.rightItems .topStudents .student img {
+  border-radius: 30px;
+  height: 50px;
+  margin-right: 10px;
+  width: 50px;
+}
+
+.rightItems .topStudents .student h4 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.rightItems .topStudents .student p {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+/* Dashboard Content -> right Items -> News feed */
+
+.eventsLink {
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.eventsLink h3 {
+  font-size: 16px;
+  line-height: 22px;
+  color: #b51aae;
+}
+
+.eventsLink a {
+  font-family: Poppins;
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--dark);
+}
+
+.newsFeed {
+  background: var(--white);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 10px 0;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.newsFeed .feeds {
+  font-family: Poppins;
+  margin: 20px 0;
+}
+
+.newsFeed .feeds .singleFeed {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  margin: 20px 0;
+}
+
+.newsFeed .feeds .singleFeed p {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.newsFeed .feeds .singleFeed span {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}

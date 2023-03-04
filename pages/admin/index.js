@@ -97,7 +97,7 @@ const Dashboard = () => {
                   <span></span>
 
                   <div>
-                    <h4>Mercy Justice</h4>
+                    <h4>Dearie Justly</h4>
                     <p>Computer Science Teacher</p>
                   </div>
                 </div>

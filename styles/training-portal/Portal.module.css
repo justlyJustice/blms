@@ -1,0 +1,102 @@
+.mainContent {
+  margin: 20px 0;
+  grid-template-columns: 3fr 2fr;
+}
+
+.leftItems {
+}
+
+.leftItems .uploadedCourses {
+  background: #f7f7f7;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.leftItems .uploadedCourses .header {
+  justify-content: space-between;
+}
+
+.leftItems .uploadedCourses .header h3 {
+  color: var(--primary);
+  font-size: 20px;
+}
+
+.leftItems .uploadedCourses .header .layoutSwitch div {
+  align-items: center;
+  background: #d8d8d8;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: 0px 4px;
+  padding: 4px;
+  transition: ease-in-out all 0.3s;
+}
+
+.leftItems .uploadedCourses .header .layoutSwitch div.activeLayout {
+  background: var(--dark-purple);
+  transition: ease-in-out all 0.3s;
+}
+
+.leftItems .uploadedCourses .header .layoutSwitch i {
+  color: var(--white);
+  font-size: 18px;
+}
+
+.leftItems .uploadedCourses .courseBody {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+/* Left Item -> Cards Contain */
+.leftItems .uploadedCourses .courseBody .courseCard {
+  background-color: var(--dark-purple);
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 4px 0;
+  padding: 30px;
+  width: 30%;
+}
+
+.leftItems .uploadedCourses .courseBody .courseCard i {
+  color: #ddc4e9;
+  font-size: 30px;
+}
+
+.leftItems .uploadedCourses .courseBody .courseCard h3 {
+  color: var(--white);
+}
+
+/* Left items -> Upload resource */
+.uploadResource {
+  background: #f7f7f7;
+  border-radius: 10px;
+  margin-top: 15px;
+  padding: 20px;
+}
+
+.leftItems .uploadResource .title {
+  color: var(--dark-purple);
+  font-size: 20px;
+}
+
+.leftItems .uploadResource .resources {
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.leftItems .uploadResource .resources .uploadCard {
+  background-color: var(--primary);
+  box-shadow: 1.1px 1.1px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  color: var(--white);
+  cursor: pointer;
+  padding: 30px 20px;
+  text-align: center;
+  width: 23%;
+}
+
+.leftItems .uploadResource .resources .uploadCard h3 {
+  font-size: 14px;
+}
