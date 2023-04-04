@@ -435,6 +435,109 @@
   -webkit-box-orient: vertical;
 }
 
+/* Dashboard -> Instructors Page */
+.instructorsTable {
+  background: rgba(245, 245, 245, 0.2);
+  border-radius: 10px;
+  font-family: Poppins;
+  /* height: 300px; */
+  margin: 15px 0;
+  padding: 20px;
+}
+
+.instructorsTable .tableHeader {
+  margin: 10px 0;
+}
+
+.instructorsTable .tableHeader .leadText {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.instructorsTable .tableHeader .leadText span {
+  font-weight: 400;
+}
+
+.instructorsTable .tableHeader .actions p {
+  margin: 0px 10px;
+}
+
+.instructorsTable .tableHeader .actions .addBtn {
+  background-color: var(--dark-purple);
+  /* width: 120px; */
+  width: fit-content;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.instructorsTable .table thead {
+  text-align: left;
+  width: 100%;
+}
+
+.instructorsTable .table thead th {
+  color: #323232;
+  font-size: 18px;
+}
+
+.instructorsTable .table tbody > * {
+  border-bottom: 1px solid #d1d1d1;
+  border-top: 1px solid #d1d1d1;
+  width: 100%;
+}
+
+.instructorsTable .table tbody tr td {
+  padding: 10px;
+}
+
+.instructorsTable .table tbody .instructorAvatar {
+  border-radius: 40px;
+  height: 50px;
+  margin-right: 8px;
+  object-fit: cover;
+  width: 50px;
+}
+
+.instructorsTable .table tbody .nameContain h4 {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.instructorsTable .table tbody .nameContain .label span {
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15px;
+  margin-right: 8px;
+  padding: 1px 5px;
+  text-align: left;
+}
+
+.instructorsTable .table tbody .nameContain .label span:first-child {
+  background: rgba(50, 8, 57, 0.5);
+}
+
+.instructorsTable .table tbody .nameContain .label span:last-child {
+  background: rgba(227, 138, 4, 0.5);
+}
+
+.instructorsTable .table .contactInfo p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+}
+
+.instructorsTable .table .contactInfo p i {
+  margin-right: 4px;
+}
+
 @media screen and (max-width: 768px) {
   .topContain {
     flex-direction: column;

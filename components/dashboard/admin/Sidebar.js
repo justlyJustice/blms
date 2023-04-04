@@ -55,16 +55,26 @@ const Sidebar = () => {
             <span>Dashboard</span>
           </Link>
 
-          <Link className={`${styles.link}`} href={`#`}>
+          <Link
+            className={`${styles.link}  ${
+              pathname === "/admin/instructors" ? `${styles.active}` : ""
+            }`}
+            href={`/admin/instructors`}
+          >
             <i className="bx bx-user-circle"></i>
 
-            <span>Instructor</span>
+            <span>Instructors</span>
           </Link>
 
-          <Link className={styles.link} href={`#`}>
+          <Link
+            className={`${styles.link}  ${
+              pathname === "/admin/students" ? `${styles.active}` : ""
+            }`}
+            href={`/admin/students`}
+          >
             <i className="bx bxs-user-badge"></i>
 
-            <span>Student</span>
+            <span>Students</span>
           </Link>
 
           <Link className={styles.link} href={`#`}>

@@ -10,6 +10,10 @@ const CustomHead = ({ description, title, image }) => {
       <meta name="description" content={description} />
       <meta property="image" content={image} />
       <meta property="url" content={currentUrl} />
+      <meta
+        name="keywords"
+        content="blms, learning management system, boungbai, learning, online school"
+      />
 
       {/* Google / Search Engine Tags */}
       <meta itemProp="name" content={title} />

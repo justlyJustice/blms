@@ -163,7 +163,7 @@ const Dashboard = () => {
             <div className={`flex ${styles.uploadedInfo}`}>
               <div className={`flex ${styles.div1}`}>
                 <div className="flex justify-space-center">
-                  <i class="bx bxs-file-export"></i>
+                  <i className="bx bxs-file-export"></i>
                 </div>
 
                 <div>
