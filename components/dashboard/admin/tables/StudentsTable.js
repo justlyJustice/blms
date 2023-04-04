@@ -118,7 +118,7 @@ const StudentsTable = (props) => {
               <input className="checkbox" type="checkbox" />
 
               <div className="flex">
-                <Image className="avatar" src={avatar} />
+                <Image alt="avatar" className="avatar" src={avatar} />
 
                 <div>
                   <p>{student.name}</p>

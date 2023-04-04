@@ -18,7 +18,7 @@ const InstructorsTable = ({ instructors }) => {
 
       <tbody>
         {instructors.map((instructor) => (
-          <tr>
+          <tr key={instructor.name}>
             <td className={`flex`}>
               <Image className={styles.instructorAvatar} src={avatar} />
 
