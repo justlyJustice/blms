@@ -3,7 +3,7 @@ import Head from "@/components/Head";
 import Image from "next/image";
 import Link from "next/link";
 
-import { SubmitButton, Form, InputGroup } from "@/components/forms";
+import { SubmitButton, Form, TextAreaGroup } from "@/components/forms";
 import { resetFields } from "@/data/forms";
 
 import { logo, resetPassIllustration } from "@/public/assets";
@@ -59,7 +59,7 @@ const ResetPassword = () => {
           >
             <div className={styles.form}>
               {resetFields.map(({ id, label, name, placeholder, type }) => (
-                <InputGroup
+                <TextAreaGroup
                   label={label}
                   name={name}
                   key={id}

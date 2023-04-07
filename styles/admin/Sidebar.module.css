@@ -2,6 +2,7 @@
   background: var(--dark-purple);
   display: flex;
   flex-direction: column;
+  height: 100%;
   width: 20%;
 }
 

@@ -77,7 +77,12 @@ const Sidebar = () => {
             <span>Students</span>
           </Link>
 
-          <Link className={styles.link} href={`#`}>
+          <Link
+            className={`${styles.link}  ${
+              pathname === "/admin/events" ? `${styles.active}` : ""
+            }`}
+            href={`/admin/events`}
+          >
             <i className="bx bx-book"></i>
 
             <span>Events</span>
@@ -95,7 +100,12 @@ const Sidebar = () => {
             <span>Calendar</span>
           </Link>
 
-          <Link className={styles.link} href={`#`}>
+          <Link
+            className={`${styles.link}  ${
+              pathname === "/admin/settings" ? `${styles.active}` : ""
+            }`}
+            href={`/admin/settings`}
+          >
             <i className="bx bx-cog"></i>
 
             <span>Settings</span>

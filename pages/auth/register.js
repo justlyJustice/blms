@@ -3,7 +3,7 @@ import * as Yup from "yup";
 import Head from "@/components/Head";
 import Image from "next/image";
 
-import { SubmitButton, Form, InputGroup } from "@/components/forms";
+import { SubmitButton, Form, TextAreaGroup } from "@/components/forms";
 import { registrationFields } from "@/data/forms";
 
 import { logo, registerIllustration } from "@/public/assets";
@@ -72,7 +72,7 @@ const Register = () => {
               {registrationFields.map(
                 ({ id, label, name, placeholder, type }) => (
                   <div className={styles.groupContain} key={id}>
-                    <InputGroup
+                    <TextAreaGroup
                       label={label}
                       name={name}
                       placeholder={placeholder}

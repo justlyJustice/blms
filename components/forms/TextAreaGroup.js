@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 import styled from "styled-components";
-import { Input } from ".";
+import { TextArea } from ".";
 
 const Group = styled.div`
   align-items: flex-start;
@@ -24,18 +24,18 @@ const Group = styled.div`
   }
 `;
 
-const InputGroup = ({ name, label, placeholder, type }) => (
+const TextAreaGroup = ({ name, label, placeholder, type }) => (
   <Group>
     <label htmlFor={name}>{label}</label>
 
-    <Input name={name} placeholder={placeholder} type={type} />
+    <TextArea name={name} placeholder={placeholder} />
   </Group>
 );
 
-InputGroup.propTypes = {
+TextAreaGroup.propTypes = {
   name: PropTypes.string,
   label: PropTypes.string,
   placeholder: PropTypes.string,
 };
 
-export default InputGroup;
+export default TextAreaGroup;

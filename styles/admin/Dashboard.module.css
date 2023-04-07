@@ -538,6 +538,127 @@
   margin-right: 4px;
 }
 
+/* Accounts section */
+.accountSection {
+  display: grid;
+  font-family: Poppins;
+  gap: 20px;
+  grid-template-columns: 2fr 1fr;
+  height: 85%;
+  margin: 15px 0;
+}
+
+.accountSection .acctInfo {
+  background-color: rgba(245, 245, 245, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.accountSection .acctInfo .topText {
+  margin-bottom: 20px;
+}
+
+.accountSection .acctInfo h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.accountSection .acctInfo p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.accountSection .acctInfo .acctForm input,
+.accountSection .acctInfo .acctForm label,
+.accountSection .acctInfo .acctForm button {
+  font-family: Poppins !important;
+}
+
+.accountSection .acctInfo .acctForm input {
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+}
+
+.accountSection .acctInfo .acctForm .btns {
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.accountSection .acctInfo .acctForm .btns button {
+  width: 20%;
+}
+
+.accountSection .acctInfo .acctForm .btns button:first-child {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+/* Account update photo */
+.accountSection .acctUpdate .updatePhoto {
+  background-color: rgba(245, 245, 245, 0.2);
+  border-radius: 10px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.accountSection .acctUpdate .updatePhoto .avatar {
+  border-radius: 40px;
+  height: 80px;
+  object-fit: cover;
+  width: 80px;
+}
+
+.accountSection .acctUpdate .updatePhoto p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 10px 0;
+  text-align: center;
+  width: 183px;
+}
+
+.accountSection .acctUpdate .updatePhoto .photobtn {
+  font-family: Poppins !important;
+  font-weight: 500;
+  width: 50%;
+}
+
+/* Account preferences */
+.accountSection .acctUpdate .preferences {
+  align-items: flex-start;
+  background-color: rgba(245, 245, 245, 0.2);
+  border-radius: 10px;
+  height: 250px;
+  margin-top: 20px;
+  padding: 30px 20px;
+}
+
+.accountSection .acctUpdate .preferences h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+.accountSection .acctUpdate .preferences .prefLinks {
+  align-items: flex-start;
+}
+
+.accountSection .acctUpdate .preferences .prefLinks a {
+  align-items: center;
+  display: flex;
+  font-size: 17px;
+  margin: 2px 0;
+}
+
+.accountSection .acctUpdate .preferences .prefLinks a i {
+  margin-right: 4px;
+}
+
 @media screen and (max-width: 768px) {
   .topContain {
     flex-direction: column;
