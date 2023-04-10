@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { Input } from ".";
+import FormSelect from "./Select";
 
 const Group = styled.div`
   align-items: flex-start;
@@ -24,18 +24,20 @@ const Group = styled.div`
   }
 `;
 
-const InputGroup = ({ name, label, placeholder, type }) => (
-  <Group>
-    <label htmlFor={name}>{label}</label>
+const SelectGroup = ({ name, options, label }) => {
+  return (
+    <Group>
+      <label htmlFor={name}>{label}</label>
 
-    <Input name={name} placeholder={placeholder} type={type} />
-  </Group>
-);
-
-InputGroup.propTypes = {
-  name: PropTypes.string,
-  label: PropTypes.string,
-  placeholder: PropTypes.string,
+      <FormSelect name={name} options={options} />
+    </Group>
+  );
 };
 
-export default InputGroup;
+SelectGroup.propTypes = {
+  name: PropTypes.string,
+  label: PropTypes.string,
+  options: PropTypes.array,
+};
+
+export default SelectGroup;

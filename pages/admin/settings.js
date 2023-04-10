@@ -39,7 +39,7 @@ const Settings = () => {
           <div className={styles.acctForm}>
             <Form
               initialValues={{
-                fullname: "Michalle Johnson",
+                fullname: "Michalle Jo",
                 phoneno: ``,
                 email: ``,
                 dob: ``,
@@ -115,7 +115,7 @@ const Settings = () => {
               </Link>
 
               <Link href={`#`}>
-                <i class="bx bx-globe"></i>
+                <i className="bx bx-globe"></i>
                 Language & Region
               </Link>
             </div>
