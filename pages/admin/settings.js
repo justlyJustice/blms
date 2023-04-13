@@ -9,16 +9,17 @@ import styles from "@/styles/admin/Dashboard.module.css";
 import Button from "@/components/Button";
 import {
   Form,
-  Input,
+  SelectGroup,
   InputGroup,
   SubmitButton,
   TextAreaGroup,
 } from "@/components/forms";
 
 const Settings = () => {
-  const values = {
-    fullname: "Michalle Johnson",
+  const formValues = {
+    fullname: "Ella Dandison",
     phoneno: ``,
+    date: ``,
     email: ``,
     dob: ``,
     country: ``,
@@ -38,31 +39,38 @@ const Settings = () => {
 
           <div className={styles.acctForm}>
             <Form
-              initialValues={{
-                fullname: "Michalle Jo",
-                phoneno: ``,
-                email: ``,
-                dob: ``,
-                country: ``,
-                bio: ``,
+              initialValues={formValues}
+              onSubmit={(values) => {
+                console.log(values);
               }}
             >
               <InputGroup
+                className={`group`}
                 name={`fullname`}
                 label="Full Name"
                 placeholder={`Your full name here`}
               />
 
               <div className={`flex`}>
-                <InputGroup label="Phone" />
+                <InputGroup className={`group`} label="Phone" />
 
-                <InputGroup label="Email" />
+                <InputGroup className={`group`} label="Email" />
               </div>
 
               <div className={`flex`}>
-                <InputGroup label="Date of Birth" type={`date`} />
+                <InputGroup
+                  className={`group`}
+                  label="Date of Birth"
+                  name={`date`}
+                  type={`date`}
+                />
 
-                <InputGroup label="Country" />
+                <SelectGroup
+                  className={`group`}
+                  name="country"
+                  label="Country"
+                  options={[`Nigeria`]}
+                />
               </div>
 
               <TextAreaGroup label="Update Bio" />

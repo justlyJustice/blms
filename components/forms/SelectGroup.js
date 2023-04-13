@@ -24,12 +24,12 @@ const Group = styled.div`
   }
 `;
 
-const SelectGroup = ({ name, options, label }) => {
+const SelectGroup = ({ name, options, label, ...props }) => {
   return (
-    <Group>
+    <Group {...props}>
       <label htmlFor={name}>{label}</label>
 
-      <FormSelect name={name} options={options} />
+      <FormSelect name={name} id={name} options={options} />
     </Group>
   );
 };

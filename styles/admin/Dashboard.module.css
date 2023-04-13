@@ -577,9 +577,20 @@
   font-family: Poppins !important;
 }
 
-.accountSection .acctInfo .acctForm input {
+.accountSection .acctInfo .acctForm input,
+.accountSection .acctInfo .acctForm select {
   border: 1px solid #d9d9d9;
   border-radius: 10px;
+}
+
+.accountSection .acctInfo .acctForm textarea {
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  height: 80px;
+}
+
+.accountSection .acctInfo .acctForm select {
+  font-family: Poppins;
 }
 
 .accountSection .acctInfo .acctForm .btns {
@@ -657,6 +668,34 @@
 
 .accountSection .acctUpdate .preferences .prefLinks a i {
   margin-right: 4px;
+}
+
+/* Events Section */
+.eventsContain {
+  background-color: rgba(245, 245, 245, 0.2);
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 20px;
+}
+
+.eventsContain .actions {
+  font-family: Poppins !important;
+}
+
+.eventsContain .actions p {
+  margin: 0 10px;
+}
+
+.eventsContain .actions .addEvent {
+  background-color: var(--dark-purple);
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.eventsContain .allEvents {
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 768px) {

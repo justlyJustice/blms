@@ -24,11 +24,11 @@ const Group = styled.div`
   }
 `;
 
-const InputGroup = ({ name, label, placeholder, type }) => (
-  <Group>
+const InputGroup = ({ name, label, placeholder, type, ...props }) => (
+  <Group {...props}>
     <label htmlFor={name}>{label}</label>
 
-    <Input name={name} placeholder={placeholder} type={type} />
+    <Input name={name} id={name} placeholder={placeholder} type={type} />
   </Group>
 );
 
@@ -36,6 +36,7 @@ InputGroup.propTypes = {
   name: PropTypes.string,
   label: PropTypes.string,
   placeholder: PropTypes.string,
+  type: PropTypes.string,
 };
 
 export default InputGroup;

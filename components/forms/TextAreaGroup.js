@@ -24,7 +24,7 @@ const Group = styled.div`
   }
 `;
 
-const TextAreaGroup = ({ name, label, placeholder, type }) => (
+const TextAreaGroup = ({ name, label, placeholder }) => (
   <Group>
     <label htmlFor={name}>{label}</label>
 

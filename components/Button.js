@@ -13,10 +13,6 @@ const Btn = styled.button`
   transition: ease-in-out all 0.5s;
   width: ${(props) => (props.width ? props.width : "100%")};
 
-  /* &:hover {
-    transform: translateX(4px);
-  } */
-
   @media screen and (max-width: 768px) {
     width: 100%;
   }
