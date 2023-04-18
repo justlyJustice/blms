@@ -593,16 +593,17 @@
   font-family: Poppins;
 }
 
-.accountSection .acctInfo .acctForm .btns {
+.btns {
   justify-content: space-between;
   margin: 10px 0;
 }
 
-.accountSection .acctInfo .acctForm .btns button {
+.btns button {
+  font-family: Poppins;
   width: 20%;
 }
 
-.accountSection .acctInfo .acctForm .btns button:first-child {
+.btns button:first-child {
   background: transparent;
   border: 1px solid var(--primary);
   color: var(--primary);
@@ -670,6 +671,96 @@
   margin-right: 4px;
 }
 
+/* Account Preferences -> Security & Login */
+.securityOptions {
+  /* background-color: red; */
+}
+
+.securityOptions .optionsContain .singleOption {
+  background-color: var(--info);
+  padding: 15px;
+  margin: 8px 0;
+}
+
+.securityOptions .optionsContain .singleOption i {
+  font-size: 18px;
+}
+
+.securityOptions .optionsContain .singleOption .optionTitle {
+  color: black;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.securityOptions .optionsContain .singleOption .optionDesc {
+  color: rgba(0, 0, 0, 0.6);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.securityOptions .optionsContain .singleOption .editBtn {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--dark-purple);
+}
+
+/* Reset Password Form */
+.resetForm {
+  background: rgba(245, 245, 245, 0.2);
+  border-radius: 20px;
+  font-family: Poppins !important;
+  padding: 30px;
+  width: 550px;
+}
+
+.resetForm label,
+.resetForm input,
+.resetForm button {
+  font-family: Poppins !important;
+}
+
+.resetForm input {
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  width: 100% !important;
+}
+
+.resetForm .logoImg {
+  margin: 25px 0;
+}
+
+.resetForm h2 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 42px;
+  text-align: center;
+}
+
+.resetForm button {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  width: fit-content;
+}
+
+.resetForm p {
+  color: #000000;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 10px;
+}
+
+.resetForm a {
+  color: var(--dark-purple);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 /* Events Section */
 .eventsContain {
   background-color: rgba(245, 245, 245, 0.2);
@@ -695,6 +786,7 @@
 }
 
 .eventsContain .allEvents {
+  margin: 10px 0;
   flex-wrap: wrap;
 }
 

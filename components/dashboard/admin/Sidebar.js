@@ -102,7 +102,9 @@ const Sidebar = () => {
 
           <Link
             className={`${styles.link}  ${
-              pathname === "/admin/settings" ? `${styles.active}` : ""
+              pathname === "/admin/settings" || pathname.includes("/settings")
+                ? `${styles.active}`
+                : ""
             }`}
             href={`/admin/settings`}
           >

@@ -1,12 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import Layout from "@/components/dashboard/admin/Layout";
 import TopContain from "@/components/dashboard/admin/TopContain";
-
-import { avatar } from "@/public/assets";
-import styles from "@/styles/admin/Dashboard.module.css";
 import Button from "@/components/Button";
+import Head from "@/components/Head";
 import {
   Form,
   SelectGroup,
@@ -15,7 +14,12 @@ import {
   TextAreaGroup,
 } from "@/components/forms";
 
-const Settings = () => {
+import { avatar } from "@/public/assets";
+import styles from "@/styles/admin/Dashboard.module.css";
+
+const Profile = () => {
+  const router = useRouter();
+
   const formValues = {
     fullname: "Ella Dandison",
     phoneno: ``,
@@ -26,8 +30,21 @@ const Settings = () => {
     bio: ``,
   };
 
+  switch (router.query.tab) {
+    case `profile`:
+      break;
+
+    default:
+      break;
+  }
+
   return (
     <Layout>
+      <Head
+        title="Dashboard | Settings"
+        description="View and manage account information."
+      />
+
       <TopContain />
 
       <section className={`${styles.accountSection}`}>
@@ -73,7 +90,7 @@ const Settings = () => {
                 />
               </div>
 
-              <TextAreaGroup label="Update Bio" />
+              <TextAreaGroup label="Update Bio" name="bio" />
 
               <div className={`flex ${styles.btns}`}>
                 <Button>Cancel</Button>
@@ -107,7 +124,7 @@ const Settings = () => {
             <h3>Other Account Settings</h3>
 
             <div className={`flex flex-column ${styles.prefLinks}`}>
-              <Link href={`#`}>
+              <Link href={`/admin/settings/security`}>
                 <i className="bx bx-check-shield"></i>
                 Security & Login
               </Link>
@@ -134,4 +151,4 @@ const Settings = () => {
   );
 };
 
-export default Settings;
+export default Profile;
