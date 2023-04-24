@@ -5,6 +5,8 @@ import Link from "next/link";
 import { avatar } from "@/public/assets";
 import Pagination from "@/components/Pagination";
 
+import students from "@/data/students";
+
 const Table = styled.table`
   border-collapse: collapse;
   border-spacing: 5em;
@@ -52,51 +54,6 @@ const Table = styled.table`
   }
 `;
 
-const students = [
-  {
-    id: Math.round((Math.random() / 10) * 40 * 20),
-    name: "Joshua Moses P.",
-    grade: "SS2",
-    age: 14,
-    gender: "Male",
-  },
-  {
-    id: Math.round((Math.random() / 10) * 40 * 20),
-    name: "Moses Abraham",
-    grade: "SS2",
-    age: 11,
-    gender: "Male",
-  },
-  {
-    id: Math.round((Math.random() / 10) * 40 * 20),
-    name: "Faith Friday",
-    grade: "SS2",
-    age: 19,
-    gender: "Female",
-  },
-  {
-    id: Math.round((Math.random() / 10) * 40 * 20),
-    name: "Joshua Moses P.",
-    grade: "SS2",
-    age: 14,
-    gender: "Male",
-  },
-  {
-    id: Math.round((Math.random() / 10) * 40 * 20),
-    name: "Joshua Moses P.",
-    grade: "SS2",
-    age: 14,
-    gender: "Male",
-  },
-  {
-    id: Math.round((Math.random() / 10) * 40 * 20),
-    name: "Joshua Moses P.",
-    grade: "SS2",
-    age: 14,
-    gender: "Male",
-  },
-];
-
 const StudentsTable = (props) => {
   return (
     <Table>
@@ -143,7 +100,7 @@ const StudentsTable = (props) => {
             </td>
 
             <td>
-              <Link className="link" href={`#`}>
+              <Link className="link" href={`/admin/students/${student.id}`}>
                 View Profile
               </Link>
             </td>

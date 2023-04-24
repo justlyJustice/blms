@@ -230,13 +230,30 @@
   height: 100vh;
 }
 
+.h-300 {
+  height: 300px;
+}
+
+.h-200 {
+  height: 300px;
+}
+
 .w-100 {
   width: 100% !important;
+}
+
+.w-100p {
+  width: 100px;
 }
 
 /* Font Family */
 .font-poppins {
   font-family: Poppins !important;
+}
+
+/* Position */
+.p-relative {
+  position: relative !important;
 }
 
 @media screen and (max-width: 768px) {

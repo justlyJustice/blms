@@ -5,7 +5,7 @@ import { Form, InputGroup } from "@/components/forms";
 
 import { modalAnimate, modalInitial } from "@/utils/variants";
 
-const SmsVerificationModal = () => {
+const NumberVerifiationModal = () => {
   return (
     <motion.div
       initial="modalInitial"
@@ -22,17 +22,23 @@ const SmsVerificationModal = () => {
       </div>
 
       <div className="w-100 font-poppins">
-        <Form initialValues={{ name: `` }}>
-          <InputGroup name={`phone`} label={`Phone Number`} />
-          <InputGroup name={`phone`} label={`Confirm Phone Number`} />
-        </Form>
+        <span>
+          We’ve just sent you a One-Time Password. Please check your message and
+          type in the code.
+        </span>
+
+        <div className="my-10">
+          <Form initialValues={{ otp: `` }}>
+            <InputGroup name={`opt`} label={`Input OTP`} />
+          </Form>
+        </div>
       </div>
 
       <Button background="purple" className="btn font-poppins">
-        Continue
+        Confirm
       </Button>
     </motion.div>
   );
 };
 
-export default SmsVerificationModal;
+export default NumberVerifiationModal;

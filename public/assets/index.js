@@ -5,3 +5,4 @@ export { default as registerIllustration } from "./register-illustration.png";
 export { default as loginIllustration } from "./login-illustration.png";
 export { default as resetPassIllustration } from "./reset-pass-illustration.png";
 export { default as successRegIllustration } from "./successful-registration-illustration.png";
+export { default as kidCoverImage } from "./kid-bg-image.jpg";

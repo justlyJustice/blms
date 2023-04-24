@@ -28,6 +28,12 @@ export default function App({ Component, pageProps }) {
     };
   }, []);
 
+  /*  return (
+    <div className="bg-danger flex justify-space-centere h-100">
+      <motion.div className="bg-dark w-100p h-300"></motion.div>
+    </div>
+  ); */
+
   return (
     <>
       <Toaster />

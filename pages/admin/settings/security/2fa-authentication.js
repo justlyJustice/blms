@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 import Button from "@/components/Button";
 import Layout from "@/components/dashboard/admin/Layout";
 import Head from "@/components/Head";
-import SmsVerificationModal from "@/components/dashboard/admin/modals/SmsVerificationModal";
+import Modal from "@/components/dashboard/admin/modals";
 import TopContain from "@/components/dashboard/admin/TopContain";
 
 import { avatar } from "@/public/assets";
@@ -13,7 +13,19 @@ import { avatar } from "@/public/assets";
 import styles from "@/styles/admin/Dashboard.module.css";
 
 const TwoFactorAuthentication = () => {
+  const ref = useRef();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState();
+
+  const reader = FileList();
+
+  const handleSelectImage = () => {
+    ref.current?.click();
+  };
+
+  const handleImageChange = (e) => {
+    setSelectedImage(reader.readAsDataURL(e.target.files[0]));
+  };
 
   return (
     <Layout>
@@ -24,10 +36,7 @@ const TwoFactorAuthentication = () => {
 
       <TopContain />
 
-      <SmsVerificationModal
-        isModalOpen={isModalOpen}
-        setIsModalOpen={setIsModalOpen}
-      />
+      <Modal isModalOpen={isModalOpen} setisModalOpen={setIsModalOpen} />
 
       <section className={`${styles.accountSection}`}>
         <div className={styles.acctInfo}>
@@ -64,7 +73,11 @@ const TwoFactorAuthentication = () => {
                 </div>
 
                 <div>
-                  <Link className={`${styles.editBtn}`} href={`#`}>
+                  <Link
+                    className={`${styles.editBtn}`}
+                    href={`#`}
+                    onClick={() => setIsModalOpen(true)}
+                  >
                     Activate
                   </Link>
                 </div>
@@ -105,6 +118,15 @@ const TwoFactorAuthentication = () => {
               src={avatar}
               width={100}
               height={100}
+              onClick={() => handleSelectImage()}
+            />
+
+            <input
+              type="file"
+              accept="*/jpg"
+              style={{ display: "none" }}
+              onChange={handleImageChange}
+              ref={ref}
             />
 
             <div>

@@ -6,6 +6,7 @@ import Layout from "@/components/dashboard/admin/Layout";
 import { EvaluationCard, TopCard } from "@/components/dashboard/admin/cards";
 import { Form, Input } from "@/components/forms";
 import { logo } from "@/public/assets";
+
 import styles from "@/styles/admin/Dashboard.module.css";
 
 const Dashboard = () => {
@@ -204,7 +205,7 @@ const Dashboard = () => {
             <div className={`flex ${styles.eventsLink}`}>
               <h3>Upcoming Events</h3>
 
-              <Link href={`#`}>See all</Link>
+              <Link href={`/admin/events`}>See all</Link>
             </div>
 
             <div className={`flex justify-space-between ${styles.eventItem}`}>

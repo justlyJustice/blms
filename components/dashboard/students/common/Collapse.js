@@ -2,7 +2,12 @@ import { useState } from "react";
 
 import styles from "@/styles/Students.module.css";
 
-const Collapse = ({ children, title = `Click to expand` }) => {
+const Collapse = ({
+  children,
+  render,
+  title = `Click to expand`,
+  ...props
+}) => {
   const [expandCollapse, setExpandCollapse] = useState(false);
 
   const handleExpandCollapse = () => {
@@ -10,12 +15,12 @@ const Collapse = ({ children, title = `Click to expand` }) => {
   };
 
   return (
-    <div className={`${styles.collapse}`}>
+    <div className={`${styles.collapse}`} {...props}>
       <div
-        className={`${styles.toggleContain} flex justify-space-between`}
+        className={`toggleContain ${styles.toggleContain} flex justify-space-between`}
         onClick={handleExpandCollapse}
       >
-        <h4>{title}</h4>
+        {render ? render : <h4>{title}</h4>}
 
         {expandCollapse ? (
           <span>

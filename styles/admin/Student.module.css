@@ -1,0 +1,100 @@
+.profileContain {
+  background: rgba(245, 245, 245, 0.2);
+  border-radius: 10px;
+  height: 80vh;
+  margin: 10px 0;
+}
+
+.profileCover {
+  background-image: url("../../public/assets/kid-bg-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 150px;
+  width: 100%;
+}
+
+.profilePic {
+  border: 3px solid var(--white);
+  border-radius: 100px;
+  height: 130px;
+  margin: 0px 15px;
+  overflow: hidden;
+  position: relative;
+  width: 130px;
+}
+
+.profilePic img {
+  object-fit: cover;
+}
+
+.profileText {
+  position: relative;
+  left: 30px;
+  top: 70px;
+}
+
+.profileInfo {
+  position: relative;
+  top: 35px;
+}
+
+.profileInfo h2 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.profileInfo span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.profileInfo p {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+/* Student Info */
+.studentInfo {
+  margin-top: 70px;
+}
+
+.studentInfo #collapse {
+  background: #f5f5f5;
+  border: none;
+  border-radius: 0px;
+  height: fit-content !important;
+}
+
+.studentInfo #collapse i {
+  color: var(--dark-purple);
+  margin: 0px 5px;
+}
+
+.studentInfo #collapse h3 {
+  color: var(--dark-purple);
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.studentInfo #collapse .body {
+  background: rgba(255, 255, 255, 0.944) !important;
+  height: fit-content;
+  padding: 10px 40px;
+}
+
+.studentInfo #collapse .body p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  margin: 5px 0;
+  text-align: justify;
+}
+
+.studentInfo #collapse .body ol li {
+  list-style-type: decimal;
+  margin: 5px 0;
+  text-align: justify;
+}
